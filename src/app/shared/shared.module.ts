@@ -14,6 +14,11 @@ import { SliderComponent } from './components/slider/slider.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    NavbarComponent,
+    SearchComponent,
+    SliderComponent
   ]
 })
 export class SharedModule { }

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { VarifyPassComponent } from './components/varify-pass/varify-pass.component';
 import { ForgetPassComponent } from './components/forget-pass/forget-pass.component';
+import { RouterModule } from '@angular/router';
+import {  ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +15,14 @@ import { ForgetPassComponent } from './components/forget-pass/forget-pass.compon
     ForgetPassComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    LoginComponent,
+    VarifyPassComponent,
+    ForgetPassComponent
   ]
 })
 export class AuthModule { }

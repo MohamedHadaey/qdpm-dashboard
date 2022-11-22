@@ -12,6 +12,10 @@ import { MessagesComponent } from './components/messages/messages.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ProfileComponent,
+    MessagesComponent
   ]
 })
 export class UserModule { }

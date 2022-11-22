@@ -4,6 +4,7 @@ import { MainComponent } from './components/main/main.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
+import { ReportsComponent } from './components/reports/reports.component';
 
 
 
@@ -12,10 +13,18 @@ import { FavouritesComponent } from './components/favourites/favourites.componen
     MainComponent,
     ProjectsComponent,
     CalenderComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    ReportsComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    MainComponent,
+    ProjectsComponent,
+    FavouritesComponent,
+    CalenderComponent,
+    ReportsComponent
   ]
 })
 export class MenuModule { }
