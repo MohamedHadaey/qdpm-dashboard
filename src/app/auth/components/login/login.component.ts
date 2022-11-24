@@ -27,11 +27,12 @@ export class LoginComponent implements OnInit {
     ]),
     password: new FormControl(null, [
       Validators.required,
-      Validators.minLength(8),
+      Validators.minLength(5),
       Validators.maxLength(100),
     ]),
     checker: new FormControl(null, [
-      Validators.required
+      Validators.required,
+      Validators.requiredTrue
     ])
   });
 

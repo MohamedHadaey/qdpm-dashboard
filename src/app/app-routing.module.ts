@@ -17,8 +17,8 @@ import { ProfileComponent } from './user/components/profile/profile.component';
 
 
 const routes: Routes = [
-  {path: "", redirectTo: "home", pathMatch: "full"},
-  {path:"home", component: MainComponent, canActivate:[AuthGuard]},
+  {path: "", redirectTo: "login", pathMatch: "full"},
+  {path:"home", component: MainComponent},
   {path:"projects", component: ProjectsComponent},
   {path:"calender", component: CalenderComponent},
   {path:"favourites", component: FavouritesComponent},
@@ -31,7 +31,7 @@ const routes: Routes = [
   {path:"navbar", component: NavbarComponent},
   {path:"Search", component: SearchComponent},
   {path:"slider", component: SliderComponent},
-  {path:"**" , redirectTo: "home", pathMatch: "full"}
+  {path:"**" , redirectTo: "login", pathMatch: "full"}
 ];
 
 @NgModule({

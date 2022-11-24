@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare const $: any;
 
 @Component({
   selector: 'app-calender',
@@ -12,4 +13,7 @@ export class CalenderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggle() {
+    $("#wrapper").toggleClass("toggled");
+  };
 }

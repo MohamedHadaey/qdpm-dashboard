@@ -5,6 +5,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { ReportsComponent } from './components/reports/reports.component';
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -17,7 +19,8 @@ import { ReportsComponent } from './components/reports/reports.component';
     ReportsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     MainComponent,

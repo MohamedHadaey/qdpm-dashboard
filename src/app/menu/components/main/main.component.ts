@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare const $: any;
 
 @Component({
   selector: 'app-main',
@@ -9,7 +10,10 @@ export class MainComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
+  toggle() {
+    $("#wrapper").toggleClass("toggled");
+  };
 
 }

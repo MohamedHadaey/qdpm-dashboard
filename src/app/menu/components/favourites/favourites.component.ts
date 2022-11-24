@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare const $: any;
 
 @Component({
   selector: 'app-favourites',
@@ -10,6 +11,11 @@ export class FavouritesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
+  toggle() {
+    $("#wrapper").toggleClass("toggled");
+  };
 
 }
