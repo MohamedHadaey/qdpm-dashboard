@@ -16,18 +16,18 @@ import { RouterModule } from '@angular/router';
     ProjectsComponent,
     CalenderComponent,
     FavouritesComponent,
-    ReportsComponent
+    ReportsComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     MainComponent,
     ProjectsComponent,
     FavouritesComponent,
     CalenderComponent,
-    ReportsComponent
+    ReportsComponent,
   ]
 })
 export class MenuModule { }

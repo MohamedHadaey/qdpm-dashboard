@@ -1,0 +1,121 @@
+.container-fluid {
+  .row-map {
+    min-height: 100vh;
+
+    .col-12 {
+      padding: 20px;
+      height: 100%;
+
+      .map {
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 0;
+        height: 100%;
+      }
+    }
+  }
+
+  .row-list {
+    .col-12 {
+      .list {
+        padding: 20px 10px !important;
+        background-color: #fff;
+        border-radius: 15px !important;
+        width: 100% !important;
+
+        table {
+          width: 100%;
+          background-color: aqua;
+          border-radius: 10px;
+          text-align: center;
+          overflow: hidden;
+          white-space: nowrap;
+
+          thead {
+            tr {
+              border-style: none;
+              color: #fff;
+              background-color: #749BC4;
+
+              th {
+                padding: 8px;
+                min-width: 180px;
+              }
+            }
+          }
+
+          tbody {
+            background-color: #fff;
+
+            tr {
+              border-style: none;
+
+              td {
+                border-bottom-width: 0;
+                min-width: 180px;
+                padding: 5px;
+
+                .item {
+                  padding: 3px 5px !important;
+                  background-color: #F3F5FD;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  p {
+                    padding: 0 10px;
+                    margin: 0;
+
+                  }
+
+                  .progress {
+                    width: 120px;
+                    height: 5px;
+                    outline: 0.5px solid #ccc;
+                    border-radius: 5px;
+                    padding: 0;
+                    background-color: #eee;
+                    .progress-bar {
+                      border-radius: 5px;
+                      overflow: hidden;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+/* start media queres  */
+
+/* start small screen */
+@media screen and (max-width:992px) {}
+
+/* end small screen */
+/* start medium screen */
+@media screen and (min-width:577px) and (max-width:768px) {}
+
+/* end medium screen */
+/* start large screen */
+@media screen and (min-width:769px) and (max-width:992px) {}
+
+/* end large screen */
+/* start extra large screen */
+@media screen and (min-width:993px) and (max-width:1200px) {}
+
+/* end axtra large screen */
+/* start extra extra large screen */
+@media screen and (min-width:1201px) and (max-width:1400px) {}
+
+@media screen and (min-width:1400px) {}
+
+/* end extra extra large screen */
+
+/* end media queres*/
+
+@media (max-width: 600px) {}
