@@ -88,6 +88,46 @@
     }
   }
 
+  .row-card {
+    .card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      .card-data {
+        padding-top: 40px;
+        table {
+          margin: 0;
+          tr {
+            th {
+              font-size: 14px;
+            }
+            td {
+              font-size: 14px;
+              color: #749BC4;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      .card-degree {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+
+        .fav-icon {
+          img {
+            width: 25px;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 

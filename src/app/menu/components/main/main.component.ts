@@ -9,14 +9,17 @@ declare const $: any;
 export class MainComponent implements OnInit {
   map:boolean = true;
   list:boolean = true;
+  card:boolean = true;
   showen:string = "maps";
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   showFav() {
     this.map =! this.map;
     this.list =! this.list;
+    this.card =! this.card;
   }
 
 
