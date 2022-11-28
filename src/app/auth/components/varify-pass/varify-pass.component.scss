@@ -132,6 +132,20 @@
                       }
                     }
                   }
+                  .msg-validate {
+                    padding: 5px 10px;
+                    width: 300px;
+                    display: flex;
+                    height: 50px;
+                    text-align: center;
+                    margin: auto;
+
+                    #validate-msg {
+                      display: none;
+                      font-size: 14px;
+                      font-weight: bold;
+                    }
+                  }
 
                 }
               }

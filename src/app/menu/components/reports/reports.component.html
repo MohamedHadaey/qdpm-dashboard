@@ -52,14 +52,165 @@
         <h2>QDPM<sub>system</sub></h2>
         <div class="d-flex justify-content-center align-items-center icons">
           <img src="../../../../assets/images/Dashboard-icons/msg01.png" alt="msgs" routerLink="/messages">
-          <img src="../../../../assets/images/Dashboard-icons/profile.png" alt="profile" class="me-3 profile"
-            routerLink="/profile">
+          <div class="dropdown">
+            <button class="dropdown-toggle me-2 p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="../../../../assets/images/Dashboard-icons/profile.png" alt="user" class="profile m-0">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <div class="row">
+                  <div class="col-4 p-0">
+                    <div class="profile-img">
+                      <div class="layer">
+                        <img src="../../../../assets/images/Dashboard-icons/profile.jpg" alt="profile-img">
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-8">
+                    <p>أحمد اسماعيل</p>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-2">
+                <button routerLink="/profile" class="hover bg-secondary"><span>الإعدادات الشخصية</span></button>
+              </li>
+              <li class="mb-2">
+                <button (click)="logOut()" routerLink="/login" class="hover bg-danger"><span>تسجيل خروج</span></button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div class="container-fluid w-100 pt-3">
-        <div
-          class="w-100 vh-50 bg-warning d-flex justify-content-center align-items-center text center px-3 py-5 mt-5 rounded-3">
-          <h2 class=" fw-bold text-white">Reports Component</h2>
+        <div class="row">
+          <div class="col-12 p-3">
+            <div class="list p-3">
+              <div class="row">
+                <div class="col-md-6 p-3">
+                  <div class="employees p-3">
+                    <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
+                      <div class="logo d-flex align-items-center">
+                        <img src="../../../../assets/images/Dashboard-icons/employee-darkgray.png" alt="employee">
+                        <h3>الموظفين</h3>
+                      </div>
+                      <div class="radio">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="employees-number d-flex justify-content-center align-items-center">
+                    <img src="../../../../assets/images/Dashboard-icons/employee-blue.png" alt="employees">
+                    <h2>25</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="employees p-3">
+                    <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
+                      <div class="logo d-flex align-items-center">
+                        <img src="../../../../assets/images/Dashboard-icons/worker-darkgray.png" alt="workers">
+                        <h3>المقاولين</h3>
+                      </div>
+                      <div class="radio">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="employees-number d-flex justify-content-center align-items-center">
+                    <img src="../../../../assets/images/Dashboard-icons/worker-blue.png" alt="employees">
+                    <h2>8500</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>مشاريع مكتملة</h4>
+                    <div class="number p-3">
+                      <h3 class="text-warning">80</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>مشاريع متأخرة</h4>
+                    <div class="number p-3">
+                      <h3 class="text-danger">25</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>مشاريع قاربت على الانتهاء</h4>
+                    <div class="number p-3">
+                      <h3 class="text-success">70</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>المشاريع الحالية</h4>
+                    <div class="number p-3">
+                      <h3 class="text-primary">122</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>لم يتم التعميد</h4>
+                    <div class="number p-3">
+                      <h3 class="text-secondary">08</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row reports">
+                <div class="col-md-6 p-3">
+                  <div class="employees p-3">
+                    <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
+                      <div class="logo d-flex align-items-center">
+                        <img src="../../../../assets/images/Dashboard-icons/rate.png" alt="rate">
+                        <h3>احصائيات المشاريع</h3>
+                      </div>
+                      <div class="radio">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="employees-number d-flex justify-content-center align-items-center">
+                    <img src="../../../../assets/images/Dashboard-icons/employee-blue.png" alt="employees">
+                    <h2>25</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="employees p-3">
+                    <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
+                      <div class="logo d-flex align-items-center">
+                        <img src="../../../../assets/images/Dashboard-icons/archives.png" alt="worker">
+                        <h3>ارشيف المشاريع</h3>
+                      </div>
+                      <div class="radio">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="employees-number d-flex justify-content-center align-items-center flex-column">
+                    <h2>8500</h2>
+                    <h3>مشاريع مكتملة</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

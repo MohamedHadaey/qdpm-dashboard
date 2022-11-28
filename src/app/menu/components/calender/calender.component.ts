@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/services/auth.service';
+
 declare const $: any;
 
 @Component({
@@ -8,7 +10,7 @@ declare const $: any;
 })
 export class CalenderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _AuthService:AuthService) { }
 
   ngOnInit(): void {
   }
@@ -24,5 +26,11 @@ export class CalenderComponent implements OnInit {
       $(".content-body").css("padding-right" , "220px");
       $("li span").fadeIn(1500);
     }
+  }
+
+  
+  // this function to log out
+  logOut() {
+    this._AuthService.logout();
   }
 }

@@ -52,14 +52,148 @@
         <h2>QDPM<sub>system</sub></h2>
         <div class="d-flex justify-content-center align-items-center icons">
           <img src="../../../../assets/images/Dashboard-icons/msg01.png" alt="msgs" routerLink="/messages">
-          <img src="../../../../assets/images/Dashboard-icons/profile.png" alt="profile" class="me-3 profile profile-active"
-            routerLink="/profile">
+          <div class="dropdown">
+            <button class="dropdown-toggle me-2 p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="../../../../assets/images/Dashboard-icons/profile.png" alt="user" class="profile m-0">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <div class="row">
+                  <div class="col-4 p-0">
+                    <div class="profile-img">
+                      <div class="layer">
+                        <img src="../../../../assets/images/Dashboard-icons/profile.jpg" alt="profile-img">
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-8">
+                    <p>أحمد اسماعيل</p>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-2">
+                <button routerLink="/profile" class="hover bg-secondary"><span>الإعدادات الشخصية</span></button>
+              </li>
+              <li class="mb-2">
+                <button (click)="logOut()" routerLink="/login" class="hover bg-danger"><span>تسجيل خروج</span></button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div class="container-fluid w-100 pt-3">
-        <div
-          class="w-100 vh-50 bg-dark d-flex justify-content-center align-items-center text center px-3 py-5 mt-5 rounded-3">
-          <h2 class=" fw-bold text-white">Profile Component</h2>
+        <div class="row">
+          <div class="profile-card">
+             <div class="profile-img">
+              <div class="layer">
+                <img src="../../../../assets/images/Dashboard-icons/profile.jpg" alt="profile-img">
+                <img src="../../../../assets/images/Dashboard-icons/camera.png" alt="camera" class="camera">
+              </div>
+             </div>
+             <div class="profile-data mt-3 p-3">
+              <div class="details">
+                <div class="right">
+                   <p>اسم الموظف</p>
+                </div>
+                <div class="left">
+                   <p>أحمد اسماعيل</p>
+                </div>
+              </div>
+              <div class="details">
+                <div class="right">
+                   <p>المسمى الوظيفي</p>
+                </div>
+                <div class="left">
+                   <p>مشرف عام</p>
+                </div>
+              </div>
+              <div class="details">
+                <div class="right">
+                   <p>القسم / الإدارة</p>
+                </div>
+                <div class="left">
+                   <p>الجودة</p>
+                </div>
+              </div>
+              <div class="details">
+                <div class="right">
+                   <p>رقم الجوال</p>
+                </div>
+                <div class="left">
+                   <p>+966550009908</p>
+                </div>
+              </div>
+              <div class="details">
+                <div class="right">
+                   <p>العنوان</p>
+                </div>
+                <div class="left">
+                   <p>عنيزة - القصيم</p>
+                </div>
+              </div>
+              <div class="details">
+                <div class="right">
+                   <p>البريد الإلكتروني</p>
+                </div>
+                <div class="left">
+                   <p>info@qdpm.com</p>
+                </div>
+              </div>
+              <div class="details">
+                <div class="right">
+                   <p>كلمة المرور</p>
+                </div>
+                <div class="left d-flex justify-content-between align-items-center">
+                   <p>***********</p>
+                   <img src="../../../../assets/images/Dashboard-icons/edit.png" alt="edit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered ">
+                      <div class="modal-content p-3">
+                          <div class="header">
+                            <h3>اعادة تعيين كلمة المرور</h3>
+                            <p>برجاء ادخال كلمة المرور الحالية وكلمة المرور الجديدة مكونه من 8 احرف / ارقام على الاقل</p>
+                          </div>
+                          <div class="body">
+                            <div class="form">
+                              <form [formGroup]="passwordForm" (ngSubmit)="submitPasswordForm(passwordForm)">
+                                <div class="form-group mb-2">
+                                  <input [type]="changeTypePass?'password':'text'" placeholder="كلمة المرور الحاليه"
+                                    formControlName="password" autocomplete="">
+                                  <!-- to show or hide password -->
+                                  <span (click)="viewPassword()" id="view-pass"><i
+                                      [ngClass]="visiblePass?'fa fa-eye-slash':'fa fa-eye'"></i></span>
+                                </div>
+                                <div class="w-100 text-start">
+                                  <p class="main-color hover">نسيت كلمة المرور؟</p>
+                                </div>
+                                <div class="form-group mb-2">
+                                  <input [type]="changeTypeNewPass?'password':'text'" placeholder="  كلمة المرور الجديدة"
+                                    formControlName="newPassword" autocomplete="">
+                                  <!-- to show or hide password -->
+                                  <span (click)="viewNewPassword()" id="view-pass"><i
+                                      [ngClass]="visibleNewPass?'fa fa-eye-slash':'fa fa-eye'"></i></span>
+                                </div>
+                                <div class="form-group mb-2">
+                                  <input [type]="changeTypeRePass?'password':'text'" placeholder="  تحقق كلمة المرور الجديدة"
+                                    formControlName="rePassword" autocomplete="">
+                                  <!-- to show or hide password -->
+                                  <span (click)="viewRePassword()" id="view-pass"><i
+                                      [ngClass]="visibleRePass?'fa fa-eye-slash':'fa fa-eye'"></i></span>
+                                </div>
+                                  <button [disabled]="passwordForm.invalid" class="btn my-3 m-auto" type="submit" data-bs-dismiss="modal" aria-label="Close">تأكيد</button>
+                                  <p class="hover text-danger h6 fw-bold" data-bs-dismiss="modal" aria-label="Close">الغاء</p>
+                              </form>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

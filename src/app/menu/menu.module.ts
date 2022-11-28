@@ -8,19 +8,18 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { RouterModule } from '@angular/router';
 
 
-
-
 @NgModule({
   declarations: [
     MainComponent,
     ProjectsComponent,
     CalenderComponent,
     FavouritesComponent,
-    ReportsComponent,
+    ReportsComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
+
   ],
   exports: [
     MainComponent,

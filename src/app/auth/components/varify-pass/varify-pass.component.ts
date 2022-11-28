@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+declare const $: any;
 
 @Component({
   selector: 'app-varify-pass',
@@ -38,23 +39,26 @@ export class VarifyPassComponent implements OnInit {
     if (varifyForm.invalid) {
       return;
     } else {
-      this._Router.navigate(['/home']);
+      if(this.code == 1111) {
+        localStorage.setItem("isLogin", JSON.stringify(true));
+        this._Router.navigate(['/home']);
+      }else{
+        $("#validate-msg").slideDown();
+        setTimeout( this.deleteMsg , 4000)
+      }
     }
 
 
-    // console.log(this.code)
-    // this.varify(this.code);
-    // this._AuthService.confirmCode(this.data).subscribe((response) => {
-    //   if (response.status == 200) {
-    //     this.toastr.success(response.msg);
-    //     this._Router.navigate(['/account/newpassword']);
-    //   } else {
-    //     this._HomesService.hideLoader();
-    //     this.toastr.error(response.msg);
-    //   }
-    // });
+    console.log(this.code)
+
     this.varifyForm.reset();
   }
+
+    //  to delete message of wrong inputs value
+    deleteMsg() {
+      $("#validate-msg").slideUp()
+    }
+
 
   // varify(code: any) {
   //   this.data.code = code;

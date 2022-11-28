@@ -52,8 +52,34 @@
         <h2>QDPM<sub>system</sub></h2>
         <div class="d-flex justify-content-center align-items-center icons">
           <img src="../../../../assets/images/Dashboard-icons/msg01.png" alt="msgs" routerLink="/messages">
-          <img src="../../../../assets/images/Dashboard-icons/profile.png" alt="profile" class="me-3 profile"
-            routerLink="/profile">
+          <div class="dropdown">
+            <button class="dropdown-toggle me-2 p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="../../../../assets/images/Dashboard-icons/profile.png" alt="user" class="profile m-0">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <div class="row">
+                  <div class="col-4 p-0">
+                    <div class="profile-img">
+                      <div class="layer">
+                        <img src="../../../../assets/images/Dashboard-icons/profile.jpg" alt="profile-img">
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-8">
+                    <p>أحمد اسماعيل</p>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-2">
+                <button routerLink="/profile" class="hover bg-secondary"><span>الإعدادات الشخصية</span></button>
+              </li>
+              <li class="mb-2">
+                <button (click)="logOut()" routerLink="/login" class="hover bg-danger"><span>تسجيل خروج</span></button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div class="container-fluid w-100 pt-3">

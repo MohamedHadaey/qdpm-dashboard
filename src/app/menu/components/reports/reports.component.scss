@@ -1,0 +1,113 @@
+.container-fluid {
+  .row {
+    .col-12 {
+      .list {
+        box-shadow: 0px 0px 5px 0.5px #ccc;
+        background-color: #fff;
+        border-radius: 15px !important;
+        width: 100% !important;
+        .row {
+          .employees {
+            box-shadow: 0px 0px 10px 0.5px #ccc;
+            border-radius: 15px;
+            background-color: #fff;
+
+            .employees-head {
+              padding: 10px ;
+              border-bottom: 3px solid #eee;
+             .logo {
+              h3 {
+                color: #3D3D3D;
+                font-weight: bold;
+                font-size: 25px;
+              }
+              img {
+                margin: 0 10px;
+                width: 40px;
+              }
+             }
+
+             .radio {
+              input {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+              .form-check-input {
+                height: 2em;
+              }
+
+              .form-switch .form-check-input {
+                width: 4em;
+              }
+             }
+            }
+
+            .employees-number {
+              padding: 30px 0;
+              img {
+                margin: 0 10px;
+                width: 60px;
+              }
+              h2 {
+                color: #749BC4;
+                font-weight: bold;
+                font-size: 50px;
+              }
+            }
+          }
+        }
+
+        // for follow projects
+        .row {
+          .projects-follow-card {
+            background-color: #F3F5FD;
+            padding: 5px;
+            border-radius: 15px;
+            text-align: center;
+
+            h4 {
+              margin: 5px 0;
+              color: #3D3D3D;
+              font-size: 18px;
+              font-weight: bold;
+            }
+
+            .number {
+              width: 100%;
+              background-color: #fff;
+              border-radius: 10px;
+
+              h3 {
+                font-weight: bold;
+                font-size: 40px;
+              }
+            }
+          }
+        }
+
+        // for reports
+        .reports {
+          .col-md-6:nth-of-type(2) {
+            .employees {
+              .employees-number {
+                padding: 20px;
+                h2 {
+                  font-size: 30px;
+
+                }
+                h3 {
+                  margin-top: 10px;
+                  color: #749BC4;
+                  font-size: 20px;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

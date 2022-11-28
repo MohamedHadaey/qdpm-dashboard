@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+declare const $: any;
 
 
 @Component({
@@ -36,16 +37,29 @@ export class LoginComponent implements OnInit {
     ])
   });
 
+
+
   submitLoginForm(loginForm: FormGroup) {
-    // console.log(loginForm.value)
+    console.log(loginForm.value)
     // if user delete [disabled]="registerForm.invalid" from html inspect
     if (loginForm.invalid) {
       return;
     } else {
-      this._Router.navigate(['/varify-pass']);
+      if(loginForm.value.username == "admin" && loginForm.value.password == "12345"){
+        this._Router.navigate(['/varify-pass']);
+      }else {
+        $("#validate-msg").slideDown();
+        setTimeout( this.deleteMsg , 4000)
+      }
     }
     this.loginForm.reset();
   }
+
+    //  to delete message of wrong inputs value
+    deleteMsg() {
+      $("#validate-msg").slideUp()
+    }
+
 
 
   ngOnInit(): void {

@@ -23,7 +23,7 @@
                       <span (click)="viewPassword()" id="view-pass"><i
                           [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
                     </div>
-                    <div class="checker pb-5  d-flex justify-content-between align-items-center ">
+                    <div class="checker pb-3  d-flex justify-content-between align-items-center ">
                       <label class="label-checker">
                         <input type="checkbox" formControlName="checker">
                         <span class="checkmark"></span>تذكرنى
@@ -32,6 +32,9 @@
                     </div>
                     <button [disabled]="loginForm.invalid" class="btn my-2" type="submit">دخول</button>
                   </form>
+                  <div class="msg-validate">
+                    <p class="text-danger" id="validate-msg">بيانات الاعتماد هذه غير متطابقة مع البيانات المسجلة لدينا.</p>
+                  </div>
                 </div>
               </div>
             </div>
