@@ -93,125 +93,134 @@
                   aria-expanded="false">
                   <img src="../../../../assets/images/Dashboard-icons/filter-gray.png" alt="user" class="profile m-0">
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li >
-                    <div class="row">
-                      <div class="col-5">
-                        <p>نوع المشروع</p>
+                <form [formGroup]="filterForm" (ngSubmit)="submitFilterForm(filterForm)">
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li >
+                      <div class="row">
+                        <div class="col-5">
+                          <p>نوع المشروع</p>
+                        </div>
+                        <div class="col-7">
+                          <select class="w-100 border border-0" formControlName="project_type">
+                            <option value="1" selected>طرق وكباري</option>
+                            <option value="2">صرف صحى</option>
+                          </select>
+                        </div>
                       </div>
-                      <div class="col-7">
-                        <select class="w-100 border border-0">
-                          <option value="1" selected>طرق وكباري</option>
-                        </select>
-                      </div>
-                    </div>
-                  </li>
-                  <li >
-                    <div class="row">
-                      <div class="col-5">
-                        <p>حالة المشروع</p>
-                      </div>
-                      <div class="col-7 ">
-                        <div class="w-100 my-1 d-flex justify-content-between align-items-center">
-                          <span>حالية</span>
-                          <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    </li>
+                    <li >
+                      <div class="row">
+                        <div class="col-5">
+                          <p>حالة المشروع</p>
+                        </div>
+                        <div class="col-7 ">
+                          <div class="w-100 my-1 d-flex justify-content-between align-items-center">
+                            <span>حالية</span>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked formControlName="now_check">
+                            </div>
                           </div>
-                        </div>
-                        <div class="w-100 my-1 d-flex justify-content-between align-items-center">
-                          <span>مكتملة</span>
-                          <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" >
+                          <div class="w-100 my-1 d-flex justify-content-between align-items-center">
+                            <span>مكتملة</span>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" formControlName="complete_check">
+                            </div>
                           </div>
-                        </div>
-                        <div class="w-100 my-1 d-flex justify-content-between align-items-center">
-                          <span>متأخرة</span>
-                          <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" >
+                          <div class="w-100 my-1 d-flex justify-content-between align-items-center">
+                            <span>متأخرة</span>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" formControlName="late_check">
+                            </div>
                           </div>
-                        </div>
-                        <div class="w-100 my-1 d-flex justify-content-between align-items-center">
-                          <span>قاربت على الإنتهاء</span>
-                          <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                          <div class="w-100 my-1 d-flex justify-content-between align-items-center">
+                            <span>قاربت على الإنتهاء</span>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked formControlName="end_check">
+                            </div>
                           </div>
-                        </div>
-                        <div class="w-100 my-1 d-flex justify-content-between align-items-center">
-                          <span>لم يتم التعميد</span>
-                          <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li >
-                    <div class="row">
-                      <div class="col-5">
-                        <p>بدء المشروع</p>
-                      </div>
-                      <div class="col-7 ">
-                        <div class="w-100 my-1 d-flex justify-content-between align-items-center">
-                          <span>18/08/2021</span>
-                          <img src="../../../../assets/images/Dashboard-icons/date.png" alt="date">
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li >
-                    <div class="row">
-                      <div class="col-5">
-                        <p>انتهاء المشروع</p>
-                      </div>
-                      <div class="col-7 ">
-                        <div class="w-100 my-1 d-flex justify-content-between align-items-center">
-                          <span>02/01/2022</span>
-                          <img src="../../../../assets/images/Dashboard-icons/date.png" alt="date">
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li >
-                    <div class="row">
-                      <div class="col-5">
-                        <p>نسبة انجاز المهمة</p>
-                      </div>
-                      <div class="col-7 ">
-                        <div class="item pt-2">
-                          <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-label="Example with label" style="width: 50%"
-                              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                          <div class="w-100 my-1 d-flex justify-content-between align-items-center">
+                            <span>لم يتم التعميد</span>
+                            <div class="form-check form-switch">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" formControlName="not_check">
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                  <li >
-                    <div class="row">
-                      <div class="col-5">
-                        <p>نسبة انجاز المقاول</p>
-                      </div>
-                      <div class="col-7 ">
-                        <div class="item pt-2">
-                          <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-label="Example with label" style="width: 25%"
-                              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </li>
+                    <li >
+                      <div class="row">
+                        <div class="col-5">
+                          <p>بدء المشروع</p>
+                        </div>
+                        <div class="col-7 ">
+                          <div class="w-100 my-1 d-flex justify-content-between align-items-center">
+                            <input type="date" name="start_project" formControlName="project_start" class="w-100">
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                  <li >
-                    <div class="row footer d-flex justify-content-center align-items-center">
-                      <div class="col-6 p-2 d-flex justify-content-center align-items-center">
-                        <button id="agree">موافق</button>
+                    </li>
+                    <li >
+                      <div class="row">
+                        <div class="col-5">
+                          <p>انتهاء المشروع</p>
+                        </div>
+                        <div class="col-7 ">
+                          <div class="w-100 my-1 d-flex justify-content-between align-items-center">
+                            <input type="date" name="end_project" formControlName="project_end" class="w-100">
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-6 p-2 d-flex justify-content-center align-items-center">
-                        <button id="exit">الغاء</button>
+                    </li>
+                    <li >
+                      <div class="row">
+                        <div class="col-5">
+                          <p>نسبة انجاز المهمة</p>
+                        </div>
+                        <div class="col-7 ">
+                          <div class="item pt-2">
+                            <input type="range" class="bg-warning" id="temp" name="temp" list="tickmarks" value="25" formControlName="task_range"/>
+                            <datalist id="tickmarks">
+                              <option value="0" label="100%"></option>
+                              <option value="25" label="75%"></option>
+                              <option value="50" label="50%"></option>
+                              <option value="75" label="25%"></option>
+                              <option value="100" label="0%"></option>
+                            </datalist>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                    <li >
+                      <div class="row">
+                        <div class="col-5">
+                          <p>نسبة انجاز المقاول</p>
+                        </div>
+                        <div class="col-7 ">
+                          <div class="item pt-2">
+                            <input type="range" class="bg-warning" id="temp" name="temp" list="tickmarks" value="75" formControlName="constructor_range"/>
+                            <datalist id="tickmarks">
+                              <option value="0" label="100%"></option>
+                              <option value="25" label="75%"></option>
+                              <option value="50" label="50%"></option>
+                              <option value="75" label="25%"></option>
+                              <option value="100" label="0%"></option>
+                            </datalist>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li >
+                      <div class="row footer d-flex justify-content-center align-items-center">
+                        <div class="col-6 p-2 d-flex justify-content-center align-items-center">
+                          <button type="submit" id="agree">موافق</button>
+                        </div>
+                        <div class="col-6 p-2 d-flex justify-content-center align-items-center">
+                          <button id="exit">الغاء</button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </form>
               </div>
             </div>
           </div>

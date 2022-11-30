@@ -131,7 +131,7 @@
                   <div class="projects-follow-card">
                     <h4>مشاريع مكتملة</h4>
                     <div class="number p-3">
-                      <h3 class="text-warning">80</h3>
+                      <h3 id="color-yellow">80</h3>
                     </div>
                   </div>
                 </div>
@@ -139,7 +139,7 @@
                   <div class="projects-follow-card">
                     <h4>مشاريع متأخرة</h4>
                     <div class="number p-3">
-                      <h3 class="text-danger">25</h3>
+                      <h3 id="color-red">25</h3>
                     </div>
                   </div>
                 </div>
@@ -147,7 +147,7 @@
                   <div class="projects-follow-card">
                     <h4>مشاريع قاربت على الانتهاء</h4>
                     <div class="number p-3">
-                      <h3 class="text-success">70</h3>
+                      <h3 id="color-green">70</h3>
                     </div>
                   </div>
                 </div>
@@ -155,7 +155,7 @@
                   <div class="projects-follow-card">
                     <h4>المشاريع الحالية</h4>
                     <div class="number p-3">
-                      <h3 class="text-primary">122</h3>
+                      <h3 id="color-primary">122</h3>
                     </div>
                   </div>
                 </div>
@@ -163,7 +163,7 @@
                   <div class="projects-follow-card">
                     <h4>لم يتم التعميد</h4>
                     <div class="number p-3">
-                      <h3 class="text-secondary">08</h3>
+                      <h3 id="color-secondary">08</h3>
                     </div>
                   </div>
                 </div>
@@ -173,19 +173,56 @@
                 <div class="col-md-6 p-3">
                   <div class="employees p-3">
                     <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
-                      <div class="logo d-flex align-items-center">
+                      <div class="logo d-flex align-items-center flex-grow-1">
                         <img src="../../../../assets/images/Dashboard-icons/rate.png" alt="rate">
                         <h3>احصائيات المشاريع</h3>
                       </div>
-                      <div class="radio">
-                        <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                          <span class="datepicker-toggle">
+                            <!-- <span class="datepicker-toggle-button"></span> -->
+                            <img class="datepicker-toggle-button" src="../../../../assets/images/Dashboard-icons/date.png" alt="date icon">
+                            <input type="date" class="datepicker-input">
+                          </span>
+                          <span>من</span>
+                         <span class="datepicker-toggle">
+                            <!-- <span class="datepicker-toggle-button"></span> -->
+                            <img class="datepicker-toggle-button" src="../../../../assets/images/Dashboard-icons/date.png" alt="date icon">
+                            <input type="date" class="datepicker-input">
+                          </span>
+                          <span>الى</span>
+                    </div>
+                    <div class="employees-number py-0">
+                      <div class="row">
+                        <div id="my-pie-chart-container">
+                          <div id="legenda">
+                            <div class="entry">
+                              <div id="color-yellow" class="entry-color"></div>
+                              <div class="entry-text"><span>مشاريع مكتملة</span></div>
+                              <span>24%</span>
+                            </div>
+                            <div class="entry">
+                              <div id="color-red" class="entry-color"></div>
+                              <div class="entry-text"><span>مشاريع متأخرة</span></div>
+                              <span>16%</span>
+                            </div>
+                            <div class="entry">
+                              <div id="color-green" class="entry-color"></div>
+                              <div class="entry-text"><span>مشاريع قاربت على الإنتهاء</span></div>
+                              <span>18%</span>
+                            </div>
+                            <div class="entry">
+                              <div id="color-primary" class="entry-color"></div>
+                              <div class="entry-text"><span>المشاريع الحالية</span></div>
+                              <span>40%</span>
+                            </div>
+                            <div class="entry">
+                              <div id="color-secondary" class="entry-color"></div>
+                              <div class="entry-text"><span>لم يتم التعميد</span></div>
+                              <span>02%</span>
+                            </div>
+                          </div>
+                          <div id="my-pie-chart"></div>
                         </div>
                       </div>
-                    </div>
-                    <div class="employees-number d-flex justify-content-center align-items-center">
-                    <img src="../../../../assets/images/Dashboard-icons/employee-blue.png" alt="employees">
-                    <h2>25</h2>
                     </div>
                   </div>
                 </div>
@@ -196,8 +233,12 @@
                         <img src="../../../../assets/images/Dashboard-icons/archives.png" alt="worker">
                         <h3>ارشيف المشاريع</h3>
                       </div>
-                      <div class="radio">
+                      <div class="radio check-completing">
                         <div class="form-check form-switch">
+                          <div class="w-100 d-flex justify-content-between">
+                            <span>مكتملة</span>
+                            <span>غير مكتملة</span>
+                          </div>
                           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
                         </div>
                       </div>

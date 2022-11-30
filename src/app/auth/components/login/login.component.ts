@@ -32,8 +32,7 @@ export class LoginComponent implements OnInit {
       Validators.maxLength(100),
     ]),
     checker: new FormControl(null, [
-      Validators.required,
-      Validators.requiredTrue
+     
     ])
   });
 

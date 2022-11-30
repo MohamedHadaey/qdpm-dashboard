@@ -66,51 +66,37 @@
                 }
                 .form {
                   form {
-                    padding: 0 10px;
-                    .form-group {
-                      padding: 5px 10px;
+                    .group {
                       margin: 20px auto;
-                      max-width: 300px;
-                      border-radius: 30px;
-                      background-color: #F3F5FD;
+                      width: 250px;
                       overflow: hidden;
                       display: flex;
+                      .row {
+                        box-shadow: none;
+                      }
 
-                      input{
+                      input {
                         width: 100%;
-                        padding: 0 10px;
+                        height: 100%;
+                        padding: 2px 5px;
+                        border-radius: 15px;
+                        text-align: center;
+                        font-size: 18px;
+                        color: #555;
                         border: none !important;
                         outline: none !important;
-                        background-color: #F3F5FD;
-                      }
-                      input::placeholder{
-                        color: #aaa;
-                        font-size: 12px;
-                        font-weight: bold;
-                      }
-                      span {
-                        width: 20px;
-                        height: 20px;
-                        padding-top: 0;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: #888;
-                        padding-top: 10px;
-                        i {
-                          font-size: 16px;
-                        }
+                        background-color: #eee;
                       }
 
-                      #view-pass:hover {
-                        cursor: pointer;
+                      input::placeholder {
+                        text-align: center;
+                        font-weight: 900;
                       }
 
-                      p:hover {
-                        cursor: pointer;
+                      input:focus {
+                        outline: 3px solid #d9e1e8 !important;
                       }
                     }
-
 
                     button {
                       background-color: #749BC4;
@@ -126,88 +112,26 @@
                       cursor: pointer;
                       box-shadow: 2px 2px 6px #00000029;
                     }
+                    .varify-msg {
+                      font-size: 12px;
+                      color: #6d6d6d;
 
-                    .checker {
-                      padding-top: 5px;
                       a {
-                        color: #6d6d6d;
-                        font-size: 12px;
-                        font-weight: 500;
-                        &:hover{
+                        color: #749BC4;
+                        text-decoration: underline;
+                        &:hover {
                           cursor: pointer;
                         }
                       }
-                      /* The label-checker */
-                      .label-checker {
-                        font-weight: 500;
-                        color: #6d6d6d;
-                        position: relative;
-                        padding-right: 25px;
-                        font-size: 12px;
+                    }
+                    .exit {
+                      font-size: 14px;
+                      color: #555;
+                      &:hover {
                         cursor: pointer;
-                        -webkit-user-select: none;
-                        -moz-user-select: none;
-                        -ms-user-select: none;
-                        user-select: none;
-                      }
-
-                      /* Hide the browser's default checkbox */
-                      .label-checker input {
-                        position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 0;
-                        width: 0;
-                      }
-
-                      /* Create a custom checkbox */
-                      .checkmark {
-                        position: absolute;
-                        top: 0;
-                        height: 20px;
-                        width: 20px;
-                        right: 0 !important;
-                        border: 2px solid rgb(172, 180, 241);
-                        border-radius: 5px;
-                      }
-
-                      /* On mouse-over, add a grey background color */
-                      .label-checker:hover input~.checkmark {
-                        background-color: transparent;
-                      }
-
-                      /* When the checkbox is checked, add a blue background */
-                      .label-checker input:checked~.checkmark {
-                        background-color: #749BC4;
-                      }
-
-                      /* Create the checkmark/indicator (hidden when not checked) */
-                      .checkmark:after {
-                        content: "";
-                        position: absolute;
-                        display: none;
-                      }
-
-                      /* Show the checkmark when checked */
-                      .label-checker input:checked~.checkmark:after {
-                        display: block;
-                      }
-
-                      /* Style the checkmark/indicator */
-                      .label-checker .checkmark:after {
-                        left: 4px;
-                        top: -2px;
-                        width: 8px;
-                        height: 15px;
-                        border: solid white;
-                        border-width: 0 3px 3px 0;
-                        -webkit-transform: rotate(45deg);
-                        -ms-transform: rotate(45deg);
-                        transform: rotate(45deg);
                       }
                     }
                   }
-
                   .msg-validate {
                     padding: 5px 10px;
                     width: 300px;
@@ -242,7 +166,7 @@
     }
   }
 }
-/* end: login-styles */
+
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -254,6 +178,9 @@ input[type=number] {
   -moz-appearance: textfield;
   appearance:textfield
 }
+/* end: login-styles */
+
+
 
 
 

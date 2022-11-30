@@ -27,7 +27,7 @@ export class ReportsComponent implements OnInit {
     }
   }
 
- 
+
   // this function to log out
   logOut() {
     this._AuthService.logout();

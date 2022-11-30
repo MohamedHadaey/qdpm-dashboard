@@ -5,6 +5,8 @@ import { VarifyPassComponent } from './components/varify-pass/varify-pass.compon
 import { ForgetPassComponent } from './components/forget-pass/forget-pass.component';
 import { RouterModule } from '@angular/router';
 import {  ReactiveFormsModule } from '@angular/forms';
+import { VarifyChangedPassComponent } from './components/varify-changed-pass/varify-changed-pass.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
 
 
 
@@ -12,7 +14,9 @@ import {  ReactiveFormsModule } from '@angular/forms';
   declarations: [
     LoginComponent,
     VarifyPassComponent,
-    ForgetPassComponent
+    ForgetPassComponent,
+    VarifyChangedPassComponent,
+    ChangePasswordComponent
   ],
   imports: [
     CommonModule,

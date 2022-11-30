@@ -166,7 +166,7 @@
                                       [ngClass]="visiblePass?'fa fa-eye-slash':'fa fa-eye'"></i></span>
                                 </div>
                                 <div class="w-100 text-start">
-                                  <p class="main-color hover">نسيت كلمة المرور؟</p>
+                                  <p routerLink="/forget-pass" data-bs-dismiss="modal" aria-label="Close" class="main-color hover">نسيت كلمة المرور؟</p>
                                 </div>
                                 <div class="form-group mb-2">
                                   <input [type]="changeTypeNewPass?'password':'text'" placeholder="  كلمة المرور الجديدة"

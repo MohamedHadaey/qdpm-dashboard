@@ -28,9 +28,9 @@
                         <input type="checkbox" formControlName="checker">
                         <span class="checkmark"></span>تذكرنى
                       </label>
-                      <a>نسيت كلمة المرور؟</a>
+                      <a routerLink="/forget-pass">نسيت كلمة المرور؟</a>
                     </div>
-                    <button [disabled]="loginForm.invalid" class="btn my-2" type="submit">دخول</button>
+                    <button [disabled]="loginForm.invalid"  class="btn my-2" type="submit">دخول</button>
                   </form>
                   <div class="msg-validate">
                     <p class="text-danger" id="validate-msg">بيانات الاعتماد هذه غير متطابقة مع البيانات المسجلة لدينا.</p>

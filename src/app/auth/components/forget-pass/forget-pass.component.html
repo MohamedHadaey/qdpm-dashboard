@@ -1,1 +1,39 @@
-<p>forget-pass works!</p>
+<div class="content">
+  <div class="navbar d-flex justify-content-center align-items-center">
+    <h2>QDPM<sub>system</sub></h2>
+  </div>
+  <div class="login-page py-5">
+    <div class="login-slide">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="login-form">
+              <div class="form-data">
+                <img src="../../../../assets/images/Dashboard-icons/logo-login.png" alt="login-logo">
+                <h3>اعادة تعيين كلمة المرور</h3>
+                <h6>برجاء ادخال رقم الهاتف ليتم ارسال كود التحقق فعادة تعيين كلمة المرور</h6>
+                <div class="form">
+                  <form [formGroup]="forgetPassForm" (ngSubmit)="submitForgetPassForm(forgetPassForm)">
+                    <div class="form-group my-5">
+                      <input type="number" placeholder="رقم الهاتف" formControlName="phone">
+                    </div>
+
+                    <button [disabled]="forgetPassForm.invalid" class="btn my-2" type="submit">تحقق</button>
+                  </form>
+                  <div class="msg-validate">
+                    <p class="text-danger" id="validate-msg">بيانات الاعتماد هذه غير متطابقة مع البيانات المسجلة لدينا.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="intro-img">
+              <img src="../../../../assets/images/login.png" class="img-fluid" alt="QDPM System">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
