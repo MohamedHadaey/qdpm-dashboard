@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,10 @@ import { GoogleMapsModule } from '@angular/google-maps';
     ReactiveFormsModule,
     NgChartsModule,
     GoogleMapsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ],
   exports: [
     MainComponent,

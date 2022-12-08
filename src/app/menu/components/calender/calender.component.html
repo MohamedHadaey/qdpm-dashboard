@@ -30,8 +30,8 @@
                   alt="home"><span>الرئيسية</span></li>
               <li routerLink="/projects"><img src="../../../../assets/images/Dashboard-icons/trackprojects.png"
                   alt="projects"><span>تتبع المشاريع</span></li>
-              <li class="active" routerLink="/calender"><img src="../../../../assets/images/Dashboard-icons/calender.png"
-                  alt="calender"><span>التقويم</span></li>
+              <li class="active" routerLink="/calender"><img
+                  src="../../../../assets/images/Dashboard-icons/calender.png" alt="calender"><span>التقويم</span></li>
               <li routerLink="/favourites"><img src="../../../../assets/images/Dashboard-icons/fav-darkgray.png"
                   alt="favourites"><span>المفضلة</span></li>
               <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
@@ -65,7 +65,7 @@
                       <div class="layer">
                         <img src="../../../../assets/images/Dashboard-icons/profile.jpg" alt="profile-img">
                       </div>
-                      </div>
+                    </div>
                   </div>
                   <div class="col-8">
                     <p>أحمد اسماعيل</p>
@@ -82,10 +82,13 @@
           </div>
         </div>
       </nav>
-      <div class="container-fluid w-100 pt-3">
-        <div
-          class="w-100 vh-50 bg-primary d-flex justify-content-center align-items-center text center px-3 py-5 mt-5 rounded-3">
-          <h2 class=" fw-bold text-white">Calender Component</h2>
+
+
+      <div style="display: flex; align-items: center;justify-content: center;" class="container-fluid w-100 pt-3">
+        <div style="width: 50vw;">
+          <mwl-calendar-month-view style="width:50%" [viewDate]="viewDate" [events]="events" [refresh]="refresh"
+            [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)">
+          </mwl-calendar-month-view>
         </div>
       </div>
     </div>
