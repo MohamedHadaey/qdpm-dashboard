@@ -63,9 +63,10 @@
                   <div class="col-4 p-0">
                     <div class="profile-img">
                       <div class="layer">
-                        <img class="img-fluid" src="../../../../assets/images/Dashboard-icons/profile.jpg" alt="profile-img">
+                        <img class="img-fluid" src="../../../../assets/images/Dashboard-icons/profile.jpg"
+                          alt="profile-img">
                       </div>
-                      </div>
+                    </div>
                   </div>
                   <div class="col-8">
                     <p>أحمد اسماعيل</p>
@@ -89,13 +90,13 @@
               <span><i class="fa-solid fa-magnifying-glass"></i></span>
               <input type="search" placeholder="بحث">
               <div class="dropdown">
-                <button class="dropdown-toggle me-2 p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                  aria-expanded="false">
+                <button class="dropdown-toggle me-2 p-0" type="button" id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="../../../../assets/images/Dashboard-icons/filter-gray.png" alt="user" class="profile m-0">
                 </button>
                 <form [formGroup]="filterForm" (ngSubmit)="submitFilterForm(filterForm)">
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li >
+                    <li>
                       <div class="row">
                         <div class="col-5">
                           <p>نوع المشروع</p>
@@ -108,7 +109,7 @@
                         </div>
                       </div>
                     </li>
-                    <li >
+                    <li>
                       <div class="row">
                         <div class="col-5">
                           <p>حالة المشروع</p>
@@ -117,37 +118,42 @@
                           <div class="w-100 my-1 d-flex justify-content-between align-items-center">
                             <span>حالية</span>
                             <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked formControlName="now_check">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked formControlName="now_check">
                             </div>
                           </div>
                           <div class="w-100 my-1 d-flex justify-content-between align-items-center">
                             <span>مكتملة</span>
                             <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" formControlName="complete_check">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                formControlName="complete_check">
                             </div>
                           </div>
                           <div class="w-100 my-1 d-flex justify-content-between align-items-center">
                             <span>متأخرة</span>
                             <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" formControlName="late_check">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                formControlName="late_check">
                             </div>
                           </div>
                           <div class="w-100 my-1 d-flex justify-content-between align-items-center">
                             <span>قاربت على الإنتهاء</span>
                             <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked formControlName="end_check">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked formControlName="end_check">
                             </div>
                           </div>
                           <div class="w-100 my-1 d-flex justify-content-between align-items-center">
                             <span>لم يتم التعميد</span>
                             <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" formControlName="not_check">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                formControlName="not_check">
                             </div>
                           </div>
                         </div>
                       </div>
                     </li>
-                    <li >
+                    <li>
                       <div class="row">
                         <div class="col-5">
                           <p>بدء المشروع</p>
@@ -159,7 +165,7 @@
                         </div>
                       </div>
                     </li>
-                    <li >
+                    <li>
                       <div class="row">
                         <div class="col-5">
                           <p>انتهاء المشروع</p>
@@ -171,14 +177,15 @@
                         </div>
                       </div>
                     </li>
-                    <li >
+                    <li>
                       <div class="row">
                         <div class="col-5">
                           <p>نسبة انجاز المهمة</p>
                         </div>
                         <div class="col-7 ">
                           <div class="item pt-2">
-                            <input type="range" class="bg-warning" id="temp" name="temp" list="tickmarks" value="25" formControlName="task_range"/>
+                            <input type="range" class="bg-warning" id="temp" name="temp" list="tickmarks" value="25"
+                              formControlName="task_range" />
                             <datalist id="tickmarks">
                               <option value="0" label="100%"></option>
                               <option value="25" label="75%"></option>
@@ -190,14 +197,15 @@
                         </div>
                       </div>
                     </li>
-                    <li >
+                    <li>
                       <div class="row">
                         <div class="col-5">
                           <p>نسبة انجاز المقاول</p>
                         </div>
                         <div class="col-7 ">
                           <div class="item pt-2">
-                            <input type="range" class="bg-warning" id="temp" name="temp" list="tickmarks" value="75" formControlName="constructor_range"/>
+                            <input type="range" class="bg-warning" id="temp" name="temp" list="tickmarks" value="75"
+                              formControlName="constructor_range" />
                             <datalist id="tickmarks">
                               <option value="0" label="100%"></option>
                               <option value="25" label="75%"></option>
@@ -209,7 +217,7 @@
                         </div>
                       </div>
                     </li>
-                    <li >
+                    <li>
                       <div class="row footer d-flex justify-content-center align-items-center">
                         <div class="col-6 p-2 d-flex justify-content-center align-items-center">
                           <button type="submit" id="agree">موافق</button>
@@ -227,261 +235,481 @@
           <div class="col-sm-2 py-2 px-0">
             <div class="theme">
               <div class="fav">
-                <img [src]="map?'../../../../assets/images/Dashboard-icons/Favorite-gray.png':'../../../../assets/images/Dashboard-icons/Favorite-blue.png'" alt="favourite" (click)="showFav()">
+                <img
+                  [src]="map?'../../../../assets/images/Dashboard-icons/Favorite-gray.png':'../../../../assets/images/Dashboard-icons/Favorite-blue.png'"
+                  alt="favourite" (click)="showFav()">
               </div>
               <div class="theme-styles">
                 <ul>
-                  <li id="list" (click)="showList()"><img src="../../../../assets/images/Dashboard-icons/list.png" alt="list"></li>
-                  <li id="map" class="active-theme" (click)="showMap()"><img src="../../../../assets/images/Dashboard-icons/map.png" alt="map"></li>
-                  <li id="card" (click)="showCard()"><img src="../../../../assets/images/Dashboard-icons/card.png" alt="card"></li>
+                  <li id="list" (click)="showList()"><img src="../../../../assets/images/Dashboard-icons/list.png"
+                      alt="list"></li>
+                  <li id="map" class="active-theme" (click)="showMap()"><img
+                      src="../../../../assets/images/Dashboard-icons/map.png" alt="map"></li>
+                  <li id="card" (click)="showCard()"><img src="../../../../assets/images/Dashboard-icons/card.png"
+                      alt="card"></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="row row-map" *ngIf="showen == 'maps'">
-          <div class="col-12" >
-            <div class="map " *ngIf="map">
-              <div class="row ">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1060958.2186432849!2d43.38579170635075!3d25.964688843173548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x158310b24d17ecf7%3A0x3ce0a3b106868cf1!2z2KfZhNio2KrYsdin2KEg2KfZhNiz2LnZiNiv2YrYqQ!5e0!3m2!1sar!2seg!4v1669635784858!5m2!1sar!2seg" width="600" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-            <div class="map map-fav" *ngIf="!map">
-              <div class="row ">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1060958.2186432849!2d43.38579170635075!3d25.964688843173548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x158310b24d17ecf7%3A0x3ce0a3b106868cf1!2z2KfZhNio2KrYsdin2KEg2KfZhNiz2LnZiNiv2YrYqQ!5e0!3m2!1sar!2seg!4v1669635784858!5m2!1sar!2seg" width="600" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
+          <google-map height="100%" width="100%" [center]="center" [zoom]="zoom" [options]="mapsop">
+
+            <map-marker *ngFor="let markerPosition of projectslocations " [icon]="markerPosition.status"
+              [position]="markerPosition.position" [options]="markerOptions"></map-marker>
+          </google-map>
         </div>
+
+
         <div class="row row-list" *ngIf="showen == 'lists'">
-         <div class="col-12 p-3">
-          <div class="list table-responsive" *ngIf="list">
-            <table class="table table-hover ">
-              <thead>
-                <tr>
-                  <th scope="col">رقم العقد</th>
-                  <th scope="col">اسم المشروع</th>
-                  <th scope="col">اسم المقاول</th>
-                  <th scope="col">تاريخ الانتهاء</th>
-                  <th scope="col">نسبة الإنجاز</th>
-                </tr>
-              </thead>
-              <tbody >
-                <tr>
-                  <td><div class="item"><p>P0369873241</p></div></td>
-                  <td><div class="item"><p>إنارة طرق</p></div></td>
-                  <td><div class="item"><p>عبدالله ابراهيم محمد</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>50%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Success example" style="width: 50%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="col-12 p-3">
+            <div class="list table-responsive" *ngIf="list">
+              <table class="table table-hover ">
+                <thead>
+                  <tr>
+                    <th scope="col">رقم العقد</th>
+                    <th scope="col">اسم المشروع</th>
+                    <th scope="col">اسم المقاول</th>
+                    <th scope="col">تاريخ الانتهاء</th>
+                    <th scope="col">نسبة الإنجاز</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873241</p>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0369659874</p></div></td>
-                  <td><div class="item"><p>طرق</p></div></td>
-                  <td><div class="item"><p>محمد عبدالرحمن</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>70%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 70%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>إنارة طرق</p>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0369873639</p></div></td>
-                  <td><div class="item"><p>صرف صحي</p></div></td>
-                  <td><div class="item"><p>يحيى عبدالله عمر</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>98%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" aria-label="Success example" style="width: 98%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>عبدالله ابراهيم محمد</p>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P036965441</p></div></td>
-                  <td><div class="item"><p>طرق</p></div></td>
-                  <td><div class="item"><p>اسلام حسن</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>75%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" aria-label="Success example" style="width: 75%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0369873244</p></div></td>
-                  <td><div class="item"><p>كباري</p></div></td>
-                  <td><div class="item"><p>زين الدين مصطفى</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>57%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-label="Success example" style="width: 57%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>50%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-label="Success example"
+                            style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0369873658</p></div></td>
-                  <td><div class="item"><p>إنارة طرق</p></div></td>
-                  <td><div class="item"><p>طارق علي</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>60%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Success example" style="width: 60%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369659874</p>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0379873659</p></div></td>
-                  <td><div class="item"><p>كباري</p></div></td>
-                  <td><div class="item"><p>حمزة السيد</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>65%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-label="Success example" style="width: 65%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>طرق</p>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0369873870</p></div></td>
-                  <td><div class="item"><p>صرف صحي</p></div></td>
-                  <td><div class="item"><p>زياد احمد</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>10%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" aria-label="Success example" style="width: 10%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>محمد عبدالرحمن</p>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0369873732</p></div></td>
-                  <td><div class="item"><p>كباري</p></div></td>
-                  <td><div class="item"><p>جمال السيد ابراهيم</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>45%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 45%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>70%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-success" role="progressbar" aria-label="Success example"
+                            style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873639</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>صرف صحي</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>يحيى عبدالله عمر</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>98%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-primary" role="progressbar" aria-label="Success example"
+                            style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P036965441</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>طرق</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>اسلام حسن</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>75%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-primary" role="progressbar" aria-label="Success example"
+                            style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873244</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>كباري</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>زين الدين مصطفى</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>57%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-danger" role="progressbar" aria-label="Success example"
+                            style="width: 57%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873658</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>إنارة طرق</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>طارق علي</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>60%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-label="Success example"
+                            style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0379873659</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>كباري</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>حمزة السيد</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>65%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-danger" role="progressbar" aria-label="Success example"
+                            style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873870</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>صرف صحي</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>زياد احمد</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>10%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-info" role="progressbar" aria-label="Success example"
+                            style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873732</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>كباري</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>جمال السيد ابراهيم</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>45%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-success" role="progressbar" aria-label="Success example"
+                            style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- ******************** -->
+            <div class="list table-responsive" *ngIf="!list">
+              <table class="table table-hover ">
+                <thead>
+                  <tr>
+                    <th scope="col">رقم العقد</th>
+                    <th scope="col">اسم المشروع</th>
+                    <th scope="col">اسم المقاول</th>
+                    <th scope="col">تاريخ الانتهاء</th>
+                    <th scope="col">نسبة الإنجاز</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873639</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>صرف صحي</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>يحيى عبدالله عمر</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>98%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-primary" role="progressbar" aria-label="Success example"
+                            style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873658</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>إنارة طرق</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>طارق علي</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>60%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-label="Success example"
+                            style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0379873659</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>كباري</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>حمزة السيد</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>65%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-danger" role="progressbar" aria-label="Success example"
+                            style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>P0369873732</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>كباري</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>جمال السيد ابراهيم</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>13-08-2022</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <p>45%</p>
+                        <div class="progress">
+                          <div class="progress-bar bg-success" role="progressbar" aria-label="Success example"
+                            style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <!-- ******************** -->
-          <div class="list table-responsive" *ngIf="!list">
-            <table class="table table-hover ">
-              <thead>
-                <tr>
-                  <th scope="col">رقم العقد</th>
-                  <th scope="col">اسم المشروع</th>
-                  <th scope="col">اسم المقاول</th>
-                  <th scope="col">تاريخ الانتهاء</th>
-                  <th scope="col">نسبة الإنجاز</th>
-                </tr>
-              </thead>
-              <tbody >
-                <tr>
-                  <td><div class="item"><p>P0369873639</p></div></td>
-                  <td><div class="item"><p>صرف صحي</p></div></td>
-                  <td><div class="item"><p>يحيى عبدالله عمر</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>98%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" aria-label="Success example" style="width: 98%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0369873658</p></div></td>
-                  <td><div class="item"><p>إنارة طرق</p></div></td>
-                  <td><div class="item"><p>طارق علي</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>60%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Success example" style="width: 60%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0379873659</p></div></td>
-                  <td><div class="item"><p>كباري</p></div></td>
-                  <td><div class="item"><p>حمزة السيد</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>65%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-label="Success example" style="width: 65%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div class="item"><p>P0369873732</p></div></td>
-                  <td><div class="item"><p>كباري</p></div></td>
-                  <td><div class="item"><p>جمال السيد ابراهيم</p></div></td>
-                  <td><div class="item"><p>13-08-2022</p></div></td>
-                  <td>
-                    <div class="item">
-                      <p>45%</p>
-                      <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 45%"
-                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-         </div>
         </div>
         <div class="row row-card p-3" *ngIf="showen == 'cards'">
           <div class="col-12">

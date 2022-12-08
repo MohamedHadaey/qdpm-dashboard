@@ -6,8 +6,9 @@ import { CalenderComponent } from './components/calender/calender.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { RouterModule } from '@angular/router';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,14 @@ import { NgChartsModule } from 'ng2-charts';
     ProjectsComponent,
     CalenderComponent,
     FavouritesComponent,
-    ReportsComponent
+    ReportsComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    NgChartsModule
+    NgChartsModule,
+    GoogleMapsModule,
   ],
   exports: [
     MainComponent,
@@ -29,6 +31,6 @@ import { NgChartsModule } from 'ng2-charts';
     FavouritesComponent,
     CalenderComponent,
     ReportsComponent,
-  ]
+  ],
 })
-export class MenuModule { }
+export class MenuModule {}
